@@ -1,0 +1,15 @@
+h1{
+  text-align: center;
+  color: red;
+
+}
+#parent{
+  border: 1px solid black;
+  height: 300px;
+  width:  300px;
+
+}
+#child1{
+  border-bottom: 1px solid black;
+  height: 300px;
+}
