@@ -1,0 +1,28 @@
+<p>Raj Tables</p>
+
+<table>
+  <thead>
+    <th>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Gender</td>
+      <td>Title</td>
+      <td>Salary</td>
+      <td>Department</td>
+      <td>Address</td>
+      <td>DOB</td>
+    </th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let emp of Employee">
+    <td>{{emp.empId}}</td>
+    <td>{{emp.empname}}</td>
+    <td>{{emp.gender}}</td>
+    <td>{{emp.title}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.department}}</td>
+    <td>{{emp.address}}</td>
+    <td>{{emp.dob}}</td>
+  </tr>
+  </tbody>
+</table>
