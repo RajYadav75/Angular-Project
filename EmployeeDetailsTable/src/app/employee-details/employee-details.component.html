@@ -1,28 +1,37 @@
-<p>Raj Tables</p>
+<h1 style="color: red;text-align: center">Raj Tables</h1>
 
 <table>
   <thead>
-    <th>
-      <td>Id</td>
-      <td>Name</td>
-      <td>Gender</td>
-      <td>Title</td>
-      <td>Salary</td>
-      <td>Department</td>
-      <td>Address</td>
-      <td>DOB</td>
-    </th>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Title</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th>Address</th>
+      <th>DOB</th>
+    </tr>
   </thead>
   <tbody>
   <tr *ngFor="let emp of Employee">
-    <td>{{emp.empId}}</td>
+    <td>{{emp.empid}}</td>
     <td>{{emp.empname}}</td>
     <td>{{emp.gender}}</td>
     <td>{{emp.title}}</td>
     <td>{{emp.salary}}</td>
-    <td>{{emp.department}}</td>
+    <td [ngSwitch]="emp.department">
+      <span *ngSwitchCase="1">HR</span>
+      <span *ngSwitchCase="2">IT</span>
+      <span *ngSwitchCase="3">Finance</span>
+      <span *ngSwitchCase="4">Heart</span>
+      <span *ngSwitchDefault>Other</span>
+    </td>
+
     <td>{{emp.address}}</td>
     <td>{{emp.dob}}</td>
   </tr>
   </tbody>
 </table>
+<br>
+<button (click)="getNewData()">Get Latest Data</button>

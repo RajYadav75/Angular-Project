@@ -4,7 +4,7 @@ import {EmployeeDetailsComponent} from './employee-details/employee-details.comp
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,EmployeeDetailsComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
