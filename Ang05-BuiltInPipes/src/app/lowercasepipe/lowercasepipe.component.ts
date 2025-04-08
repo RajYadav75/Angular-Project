@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-friends',
-  imports: [CommonModule, FormsModule],
-  templateUrl: './friends.component.html',
-  styleUrl: './friends.component.css'
+  selector: 'app-lowercasepipe',
+  imports: [
+    CommonModule
+  ],
+  templateUrl: './lowercasepipe.component.html',
+  styleUrl: './lowercasepipe.component.css'
 })
-export class FriendsComponent {
+export class LowercasepipeComponent {
   friends:any[] = [];
   constructor(){
     this.friends = [
@@ -199,4 +200,5 @@ export class FriendsComponent {
       }
     ];
   }
+
 }

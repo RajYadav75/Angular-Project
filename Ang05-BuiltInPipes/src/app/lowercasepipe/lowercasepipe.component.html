@@ -1,4 +1,4 @@
-<p>friends works!</p>
+<p>lowercasepipe works!</p>
 <table >
   <thead>
   <tr>
@@ -15,9 +15,9 @@
   <tbody>
   <tr *ngFor="let frd of friends">
     <td>{{frd.id}}</td>
-    <td>{{frd.name}}</td>
-    <td>{{frd.gender}}</td>
-    <td>{{frd.title}}</td>
+    <td>{{frd.name|lowercase}}</td>
+    <td>{{frd.gender|lowercase}}</td>
+    <td>{{frd.title|lowercase}}</td>
     <td>{{frd.salary}}</td>
     <td [ngSwitch]="frd.department">
       <span *ngSwitchCase="1">HR</span>
@@ -26,7 +26,7 @@
       <span *ngSwitchCase="4">LoverBoy</span>
       <span *ngSwitchDefault>Pta Nhi Kaun Hai</span>
     </td>
-    <td>{{frd.address}}</td>
+    <td>{{frd.address|lowercase}}</td>
     <td>{{frd.dob}}</td>
   </tr>
   </tbody>
