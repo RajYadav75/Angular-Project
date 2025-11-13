@@ -1,0 +1,4 @@
+class Product {
+    //TODO:- members
+}
+
