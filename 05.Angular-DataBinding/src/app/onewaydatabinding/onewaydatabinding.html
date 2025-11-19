@@ -1,0 +1,28 @@
+<input type="text" value="{{username}}">
+<span>{{ username }}</span>
+<br>
+<input type="checkbox" checked="{{stock}}">
+<span>{{ stock }}</span>
+<br>
+
+<input type="checkbox" [checked]="stock">
+<span>{{ stock }}</span>
+
+
+<table height="200" width="300" border="1"></table>
+<table [width]="tWidth" [attr.height]="tHeight" border="1">
+<!--<table [width]="tWidth" [height]="tHeight" border="1">-->
+
+    <div class="container-fluid">
+      <h2>Interpolation</h2>
+      <dl>
+        <dt>Stock</dt>
+        <dd>
+          <input type="checkbox" [checked]="stock"> {{ (stock == true) ? "Available" : "Out of Stock" }}
+        </dd>
+        <dt>Name</dt>
+        <dd>
+          <input type="text" [value]="username">
+        </dd>
+      </dl>
+    </div>
