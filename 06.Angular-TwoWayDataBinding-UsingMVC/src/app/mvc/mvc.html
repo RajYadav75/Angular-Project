@@ -1,0 +1,49 @@
+<!--
+<div class="container-fluid">
+  <h2>Two Way Binding</h2>
+  User Name : <input type="text" [(ngModel)]="UserName">
+  <h4>Hello ! {{UserName}} </h4>
+</div>
+-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 ">
+      <h2>Register Product</h2>
+      <dl>
+        <dt>Name</dt>
+        <dd>
+          <input type="text" class="form-control" [(ngModel)]="Product.Name" >
+        </dd>
+        <dt>Price</dt>
+        <dd>
+          <input type="text" class="form-control" [(ngModel)]="Product.Price">
+        </dd>
+        <dt>Stock</dt>
+        <dd class="form-switch">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="Product.Stock"> Available
+        </dd>
+        <dt>Shipped To</dt>
+        <dd>
+          <select name="" id="" class="form-select" [(ngModel)]="Product.ShippedTo">
+            <option >Bansgaon</option>
+            <option >Gorakhpur</option>
+          </select>
+        </dd>
+      </dl>
+      <button class="btn btn-primary w-100" (click)="RegisterClick()">Register</button>
+    </div>
+    <div class="col-9">
+      <h2>Details</h2>
+      <dl>
+        <dt>Name:</dt>
+        <dd [innerText]="UpdatedProduct.Name"></dd>
+        <dt>Price:</dt>
+        <dd>{{UpdatedProduct.Price}}</dd>
+        <dt>Stock:</dt>
+        <dd>{{(UpdatedProduct.Stock ==true)?"Available":"Out of Stock"}}</dd>
+        <dt>Shipped To:</dt>
+        <dd>{{UpdatedProduct.ShippedTo}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
