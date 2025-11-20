@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <h2>My Friend</h2>
+      <dl>
+        <dt>Name:</dt>
+        <dd><input type="text" ngModel #Name="ngModel" class="form-control"></dd>
+        <dt>Address:</dt>
+        <dd><input type="text" ngModel #address="ngModel" class="form-control"></dd>
+        <dt>Mobile Number:</dt>
+        <dd><input type="tel" ngModel #phno="ngModel" class="form-control"></dd>
+        <dt>Is Available:</dt>
+        <dd class="form-switch"><input type="checkbox" ngModel #isAvailable="ngModel" class="form-check-input"> Available</dd>
+        <dt>Current Location:</dt>
+        <dd>
+          <select ngModel #location="ngModel" class="form-select">
+            <option>Kanapar</option>
+            <option>Harigana</option>
+            <option>Kanaicha</option>
+            <option>Piperpati</option>
+            <option>Bhaisahi</option>
+          </select>
+        </dd>
+      </dl>
+      <button class="btn btn-danger w-100">Register</button>
+    </div>
+    <div class="col-9">
+      <h2>Friend Details</h2>
+      <dl>
+        <dt>Name:</dt>
+        <dd>{{Name.value}}</dd>
+        <dt>Address:</dt>
+        <dd>{{address.value}}</dd>
+        <dt>Mobile Number:</dt>
+        <dd>{{phno.value}}</dd>
+        <dt>IsAvailable:</dt>
+        <dd>{{(isAvailable.value == true)?"Friend is Nithalla":"Friend is Busy"}}</dd>
+        <dt>Current Location:</dt>
+        <dd>{{location.value}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
