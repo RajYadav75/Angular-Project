@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="discription" *ngIf="toggleDescription.value">
+        <textarea rows="4" cols="40">
+            {{product.description}}
+        </textarea>
+    </div>
+    <h2>Product Details</h2>
+    <div class="form-switch">
+        <input type="checkbox" ngModel #toggleDescription="ngModel"  class="form-check-input"> View Description
+    </div>
+    <dl>
+        <dt>Product Id</dt>
+        <dd>{{product.id}}</dd>
+        <dt>Product Title</dt>
+        <dd>{{product.title}}</dd>
+        <dt>Product Price</dt>
+        <dd>{{product.price}}</dd>
+        <dt>Product Category</dt>
+        <dd>{{product.category}}</dd>
+        <dt>Product Image</dt>
+        <dd>
+            <img [src]="product.image" alt="Product Image" width="100" height="100">
+        </dd>
+        <dt>Product Rating</dt>
+        <dd>
+            <span class="bi bi-star-fill text-success">{{product.rating.rate}} [{{product.rating.count}}]</span>
+        </dd>
+    </dl>
+    <button (click)="PreviousClick()" class="btn btn-success me-2">
+        <span class="bi bi-chevron-left"></span>
+      </button>
+      <button class="btn btn-success" (click)="NextClick()">
+        <span class="bi bi-chevron-right"></span>
+      </button>
+</div>
