@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h2>Content Projection</h2>
+    <div>
+        <select (click)="TemplateChange()" [(ngModel)]="TemplateName">
+            <option>Choose Option</option>
+            <option value="Template1">Template 1</option>
+            <option value="Template2">Template 2</option>
+            <option value="Template3">Template 3</option>
+        </select>
+    </div>
+    <div *ngIf="true; then ThenBlock"></div>
+    <ng-template #Template1>
+        <h3>Template 1</h3>
+        <p>This is the first template</p>
+    </ng-template>
+    <ng-template #Template2>
+        <h3>Template 2</h3>
+        <p>This is the second template</p>
+    </ng-template>
+    <ng-template #Template3>
+        <h3>Template 3</h3>
+        <p>This is the third template</p>
+    </ng-template>
+</div>
+
+<app-mobile-details></app-mobile-details>
