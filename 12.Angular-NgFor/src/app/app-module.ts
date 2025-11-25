@@ -6,12 +6,14 @@ import { App } from './app';
 import { Ngforcomponent } from './ngforcomponent/ngforcomponent';
 import { FormsModule } from '@angular/forms';
 import { ForDemo } from './for-demo/for-demo';
+import { Fakestore } from './fakestore/fakestore';
 
 @NgModule({
   declarations: [
     App,
     Ngforcomponent,
-    ForDemo
+    ForDemo,
+    Fakestore
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,6 @@ import { ForDemo } from './for-demo/for-demo';
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection()
   ],
-  bootstrap: [Ngforcomponent]
+  bootstrap: [Fakestore]
 })
 export class AppModule { }
