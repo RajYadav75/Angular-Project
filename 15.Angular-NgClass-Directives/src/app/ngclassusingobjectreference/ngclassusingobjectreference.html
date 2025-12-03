@@ -1,0 +1,7 @@
+<p>ngclassusingobjectreference works!</p>
+<ul class="list-unstyled">
+    <li><input ngModel #border="ngModel" type="checkbox">Border</li>
+    <li><input ngModel #background="ngModel" type="checkbox">Background</li>
+    <li><input ngModel #text="ngModel" type="checkbox">Text Effect</li>
+</ul>
+ <h1 [ngClass]="{'bg-style':background.value, 'text-style':text.value, 'border-style':border.value}">Sample Text</h1>

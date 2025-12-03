@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h2>Class Binding</h2>
+    <ul class="list-unstyled">
+        <ul><input type="checkbox" ngModel #border="ngModel">Border</ul>
+        <ul><input type="checkbox" ngModel #background="ngModel">Background</ul>
+        <ul><input type="checkbox" ngModel #text="ngModel">Text</ul>
+    </ul>
+    <h1 [ngClass]="'bg-style'">Sample Text</h1>
+    <h1 [ngClass]="['bg-style','text-style','border-style']">Sample Text</h1>
+    <h1 [ngClass]="{'bg-style':background.value, 'text-style':text.value, 'border-style':border.value}">Sample Text</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<app-userformngclass></app-userformngclass>
