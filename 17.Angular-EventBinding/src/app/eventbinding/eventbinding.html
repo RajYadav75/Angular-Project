@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <h2>Event Binding</h2>
+    <button id="btnInsert" name="InsertButton" class="btn btn-danger" (click)="InsertClick($event)">Insert</button>
+</div>
+
+<hr>
+<button (click)="InsertClick('Record Inserted')" class="btn btn-primary">Insert Record </button>
+<button (click)="InsertClick(['TV','Mobile'])" class="btn btn-primary">Record Inserted taking Input Array</button>
+<button (click)="InsertClick({id:1, name:'TV'})" class="btn btn-primary">Record Inserted taking Input Object</button>
+<button (click)="InsertClick(1, 'TV', true)" class="btn btn-primary">Record Inserted taking Input Any</button>
+<button class="btn btn-primary" (click)="InsertClick($event, 'Record Inserted')">Using Event </button>
