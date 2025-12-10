@@ -1,0 +1,13 @@
+<div class="container-fluid" (mousemove)="MouseMove($event)">
+    <h2>Shoe</h2>
+    <img width="200" [src]="imgSrc" height="100">
+    <div class="mt-2">
+        <div class="btn-group">
+            <button (mouseover)="setOtherShoes('black')" name="black" class="text-white" style="background-color:black">Black</button>
+            <button (mouseover)="setOtherShoes('green')" name="green" class="text-white" style="background-color:green">Green</button>
+            <button (mouseover)="setOtherShoes('blue')" name="blue" class="text-white" style="background-color:blue">Blue</button>
+        </div>
+    </div>
+    <div style="height:1000px"></div>
+    <img src="https://cdn.pixabay.com/animation/2022/08/21/20/03/20-03-41-348_512.gif" [ngStyle]="styleObject" width="50" height="50">
+</div>
